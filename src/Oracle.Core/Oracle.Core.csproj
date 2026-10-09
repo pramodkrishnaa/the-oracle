@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Reference the source generator as an analyzer -->
+    <ProjectReference Include="..\..\src\Oracle.Generators\Oracle.Generators.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- The generator reads this file via AdditionalTextsProvider from THIS project's compilation -->
+    <AdditionalFiles Include="..\Oracle.Generators\prophecies.txt" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,21 @@
+// This is the source file that drives the source generator. Each line has the form "Kind|Answer".
+Affirmative|It is certain
+Affirmative|It is decidedly so
+Affirmative|Without a doubt
+Affirmative|Yes definitely
+Affirmative|You may rely on it
+Affirmative|As I see it, yes
+Affirmative|Most likely
+Affirmative|Outlook good
+Affirmative|Yes
+Affirmative|Signs point to yes
+NonCommittal|Reply hazy, try again
+NonCommittal|Ask again later
+NonCommittal|Better not tell you now
+NonCommittal|Cannot predict now
+NonCommittal|Concentrate and ask again
+Negative|Don't count on it
+Negative|My reply is no
+Negative|My sources say no
+Negative|Outlook not so good
+Negative|Very doubtful

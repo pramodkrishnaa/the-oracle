@@ -1,0 +1,12 @@
+bin/
+obj/
+*.user
+*.suo
+*.pidb
+*.log
+oracle.db
+oracle.db-shm
+oracle.db-wal
+.vs/
+.vscode/
+.idea/

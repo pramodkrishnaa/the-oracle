@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: the-oracle
+    runtime: docker
+    dockerfilePath: ./src/Oracle.Api/Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: Oracle__Mood
+        value: Balanced

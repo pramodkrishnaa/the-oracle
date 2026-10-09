@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Oracle</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="stage">
+    <h1>The Oracle</h1>
+    <p class="tagline">A $2 Magic 8-Ball, rebuilt as a cloud-native .NET microservice.</p>
+
+    <div class="ball" id="ball" aria-hidden="true">
+      <div class="ball-window">
+        <span class="ball-answer" id="ballAnswer"></span>
+      </div>
+    </div>
+
+    <form id="askForm" class="ask-form">
+      <label for="question">Ask the Oracle a yes/no question</label>
+      <input id="question" name="question" type="text" maxlength="280" autocomplete="off"
+             placeholder="Will I get the job?" required />
+      <button type="submit" id="askButton">ASK</button>
+    </form>
+
+    <p class="status" id="status" aria-live="polite"></p>
+    <p class="mood-badge" id="moodBadge"></p>
+
+    <section class="scroll" aria-label="Scroll of past prophecies">
+      <h2>Scroll of Prophecies</h2>
+      <ul id="history" class="history-list"></ul>
+    </section>
+  </main>
+
+  <script src="lib/signalr.min.js"></script>
+  <script src="oracle.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+services:
+  oracle:
+    build:
+      context: .
+      dockerfile: src/Oracle.Api/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - Oracle__Mood=Balanced
+      - ConnectionStrings__OracleDb=Data Source=/app/data/oracle.db
+    volumes:
+      - oracle-data:/app/data
+
+volumes:
+  oracle-data:
