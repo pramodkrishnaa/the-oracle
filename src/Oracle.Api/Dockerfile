@@ -2,6 +2,12 @@
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 
+# Directory.Build.props lives one level above src/ in the real repo (sets LangVersion=latest,
+# Nullable, TreatWarningsAsErrors for every project) -- MSBuild finds it by searching upward
+# from each project file, so it must land one directory above WORKDIR here too.
+COPY Directory.Build.props /Directory.Build.props
+COPY global.json /global.json
+
 # Copy csproj files and restore as distinct layers
 COPY src/Oracle.Api/Oracle.Api.csproj ./Oracle.Api/
 COPY src/Oracle.Core/Oracle.Core.csproj ./Oracle.Core/
