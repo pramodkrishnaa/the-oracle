@@ -12,8 +12,8 @@ COPY src/Oracle.Generators.Tests/Oracle.Generators.Tests.csproj ./Oracle.Generat
 
 RUN dotnet restore "Oracle.Api/Oracle.Api.csproj"
 
-# Copy the entire source tree
-COPY src/ ./src/
+# Copy the entire source tree (destinations above strip the "src/" prefix, so this must too)
+COPY src/ ./
 
 # Build and publish the API project
 RUN dotnet publish "Oracle.Api/Oracle.Api.csproj" -c Release -o /app/publish /p:PublishTrimmed=false
